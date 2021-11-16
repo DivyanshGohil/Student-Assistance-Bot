@@ -25,17 +25,11 @@ def sms_reply():
 
     resp = MessagingResponse()
 
-    if msg == "info":
+    if msg == "hello":
         #resp = MessagingResponse()
         ans = index()
         resp.message(ans)
         return str(resp)
-
-    elif msg == 'myno':
-        #resp = MessagingResponse()
-        ans = from_number
-        resp.message(ans)
-        return str(resp) 
 
     elif re.search("^\d\d+[a-z][a-z]+\d\d\d$",msg):
         i_d = msg
